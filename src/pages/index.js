@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { useState } from 'react';
+import Form from '../components/Form';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,6 +47,7 @@ export default function Home() {
                 className="rounded-full ml-3 group-hover:opacity-20"
               />
             </Link>
+            <Form/>
           </>
         }
         <Link href="/" onClick={signIn}>{(!session) &&
