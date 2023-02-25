@@ -19,7 +19,7 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
+  - [Pre-requisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   <!-- - [Run tests](#run-tests) -->
@@ -34,7 +34,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  <a name="about-project"></a>
+# 📖  <a name="about-project">Luna-Mental-Health</a>
 
 
 **LunaHealth**  is a web application built using the Next.js framework, which focuses on server-side rendering (SSR) of React applications. The app is designed to provide resources and tools to help people manage their mental health.
@@ -91,7 +91,7 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### Pre-requisites
 
 In order to run this project you need:
 - Knowledge on Git version control
