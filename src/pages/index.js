@@ -58,11 +58,6 @@ export default function Home() {
               <button>Login</button>
             }
             </Link>
-<<<<<<< HEAD
-          </div>
-        </div>
-        <Form/>
-=======
             <Link href="/cart">
               <button className="xs:p-0 text-sm">Cart {number}</button>
             </Link>
@@ -85,7 +80,6 @@ export default function Home() {
           <button>Login</button>
         }
         </Link>
->>>>>>> 1cc3bc5b9d7268ddaef3aef20c0bab008e6f0f83
       </main>
     </>
   )
