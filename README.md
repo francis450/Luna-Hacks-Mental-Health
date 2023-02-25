@@ -4,7 +4,7 @@
   <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <!-- <br/> -->
 
-  <h3><b>Luna Hacks Mental Health</b></h3>
+  <h3><b></b></h3>
 
 </div>
 
@@ -19,7 +19,7 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Pre-requisites](#prerequisites)
+  - [Pre-requisites](#pre-requisites)
   - [Install](#install)
   - [Usage](#usage)
   <!-- - [Run tests](#run-tests) -->
@@ -52,26 +52,19 @@
 </details>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://xata.io/">Xata Serverless</a></li>
-  </ul>
-</details>
-
-<details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.xata.io/">Xata Serverless Database</a></li>
   </ul>
 </details>
 
 
-<!-- ### Key Features <a name="key-features"></a>
+### Key Features <a name="key-features"></a>
 
 
 - **[key_feature_1]**
 - **[key_feature_2]**
-- **[key_feature_3]** -->
+- **[key_feature_3]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -114,7 +107,7 @@ Install this projects dependencies with:
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command in the terminal/powershell:
 >npm start
 
 
@@ -128,8 +121,6 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
-
-## 🔭 Features <a name="future-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,51 +177,8 @@ You can deploy this project using:
     </ul>
 </details>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-<!-- ## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/). -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-<!-- ## ⭐️ Show your support <a name="support"></a>
-
-> Write a message to encourage readers to support your project
-
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-<!-- ACKNOWLEDGEMENTS -->
-
-<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
-I would like to thank... -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- FAQ (optional) -->
 
-<!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
