@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://Mutende22-s-workspace-jm5mhl.us-east-1.xata.sh/db/mental_health",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "cjs"
+  }
+}
