@@ -62,31 +62,31 @@ const tables = [
     ],
   },
   {
-    name: "products",
+    name: "self_care",
     columns: [
-      { name: "name", type: "string", unique: true },
-      { name: "description", type: "string" },
-      { name: "price", type: "float", notNull: true, defaultValue: "0.00" },
-      { name: "image", type: "string" },
-      { name: "available", type: "int" },
+      { name: "Goals", type: "string" },
+      { name: "self-exam", type: "string" },
     ],
   },
   {
-    name: "cart",
+    name: "Analytics",
     columns: [
-      { name: "user_id", type: "link", link: { table: "nextauth_users" } },
-      { name: "quantity", type: "float", notNull: true, defaultValue: "1" },
-      {
-        name: "is_ordered",
-        type: "bool",
-        notNull: true,
-        defaultValue: "false",
-      },
-      { name: "order", type: "link", link: { table: "orders" } },
-      { name: "product_id", type: "link", link: { table: "products" } },
+      { name: "Dashboard", type: "multiple" },
+      { name: "Weight", type: "string" },
     ],
   },
-  { name: "orders", columns: [{ name: "total_amount", type: "float" }] },
+  {
+    name: "quotes",
+    columns: [
+      {
+        name: "quote",
+        type: "string",
+        notNull: true,
+        defaultValue: "You are not alone",
+      },
+      { name: "self_care_id", type: "link", link: { table: "self_care" } },
+    ],
+  },
 ];
 /** @type { import('../../client/src').ClientConstructor<{}> } */
 const DatabaseClient = (0, client_1.buildClient)();
