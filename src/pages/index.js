@@ -57,8 +57,6 @@ export default function Home() {
           <button>Login</button>
         }
         </Link>
-        <Form/>
-        
       </main>
     </>
   )
