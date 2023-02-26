@@ -18,6 +18,9 @@ export default function Home() {
     name = session.user.name.split(" ")[0]
   }
   let [number, setNumber] = useState(0);
+
+  const [symptom, setSymptom] = useState("")
+
   return (
     <>
       <Head>
@@ -57,7 +60,7 @@ export default function Home() {
           <button>Login</button>
         }
         </Link>
-        <Form />
+        <Form setSymptom={setSymptom} />
       </main>
     </>
   )
