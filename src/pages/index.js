@@ -4,12 +4,13 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Form from '@/components/Form';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   const { data: session } = useSession();
   let name = "";
   let email = "";
@@ -18,6 +19,27 @@ export default function Home() {
     name = session.user.name.split(" ")[0]
   }
   let [number, setNumber] = useState(0);
+
+  const [symptom, setSymptom] = useState("")
+  const [quotes, setQuotes] = useState([])
+
+  async function getQuotes() {
+		const quotes = await fetch("/api/get-quotes", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				symptom: symptom
+			})
+		}).then(r => r.json());
+    setQuotes(quotes)
+	}
+  
+  useEffect(() => {
+    if (symptom) getQuotes()
+  }, [symptom])
+  console.log('symptom', symptom);
   return (
     <>
       <Head>
@@ -57,6 +79,10 @@ export default function Home() {
           <button>Login</button>
         }
         </Link>
+        <Form setSymptom={setSymptom} />
+        {quotes.map((q, id) => {
+          return (<div key={id}>{q.quote}</div>)  
+        })}
       </main>
     </>
   )

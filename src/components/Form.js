@@ -1,52 +1,73 @@
-import React, {useState} from 'react'
-function Form({question, options}){
-    const [selectedOption, setSelectedOption] = useState(null);
+import React, { useState } from 'react'
+function Form({ setSymptom }) {
 
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
+    const symptomMatcher = {
+            depression: "Weight loss",
+            satisfaction: "Self-reflection",
+            anxiety: "Reduce anxiety",
+            stress: "relationships"
     }
-    
-    
+    const [inputs, setInputs] = useState(
+        {
+            depression: "",
+            satisfaction: "",
+            anxiety: "",
+            stress: ""
+        }
+    )
+    function handleChange(e) {
+        let { name, id, value } = e.target;
+        console.log(name, value);
+        setInputs({ ...inputs, [name]: value })
+    }
+    function submitForm(e) {
+        e.preventDefault();
+        const highestValueKey = Object.entries(inputs).reduce((max, curr) => max[1] > curr[1] ? max : curr)[0];
+        setSymptom(symptomMatcher[highestValueKey])
+        console.log(symptomMatcher[highestValueKey])
+
+    }
+    console.log(inputs)
     return (
         <div className="question-card">
-        <div className="options-dropdown">
-            <form className="ml-12 flex flex-col ">
-                <label>Are you feeling Down?</label>
-                <select name='depression' className="dropdown-menu p-4" onChange="handleSelectChange()">
-                    <option value="dep3">Everyday</option>
-                    <option value="dep2">Nearly Everyday</option>
-                    <option value="dep1">More than half the Days</option>
-                    <option value="dep0">Not at all</option>
-                </select>
-                
-                <label>Little interest or pleasure in doing Things?</label>
-                <select name="satisfaction" className="dropdown-menu p-4" onChange="handleSelectChange()">
-                    <option value="satis3">Everyday</option>
-                    <option value="satis2">Almost Everyday</option>
-                    <option value="satis1">More than half the Days</option>
-                    <option value="satis0">Not at all</option>
-                </select>
+            <div className="options-dropdown">
+                <form className="ml-12 flex flex-col " onSubmit={submitForm}>
+                    <label>Are you feeling Down?</label>
+                    <select name='depression' id='depression' className="dropdown-menu p-4" onChange={handleChange}>
+                        <option value="0">Not at all</option>
+                        <option value="1">More than half the Days</option>
+                        <option value="2">Nearly Everyday</option>
+                        <option value="3">Everyday</option>
+                    </select>
 
-                <label>Trouble Falling Asleep or Staying Asleep?</label>
-                <select name="anxiety" className="dropdown-menu p-4" onChange="handleSelectChange()">
-                    <option value="anx3">Everyday</option>
-                    <option value="anx2">Almost Everyday</option>
-                    <option value="anx1">More than half the Days</option>
-                    <option value="anx0">Not at all</option>
-                </select>
-                
-                <label>Feeling Tired or having little Energy?</label>
-                <select name="stress" className="dropdown-menu p-4 " onChange="handleSelectChange()">
-                    <option value="stress3">Everyday</option>
-                    <option value="stress2">Nearly Everyday</option>
-                    <option value="stress1">More than half the Days</option>
-                    <option value="stress0">Not at all</option>
-                </select>
+                    <label>Little interest or pleasure in doing Things?</label>
+                    <select name="satisfaction" id='satisfaction' className="dropdown-menu p-4" onChange={handleChange}>
+                        <option value="0">Not at all</option>
+                        <option value="1">More than half the Days</option>
+                        <option value="2">Nearly Everyday</option>
+                        <option value="3">Everyday</option>
+                    </select>
 
-                <button type="submit" className="float-left">Submit</button>
-            </form>
+                    <label>Trouble Falling Asleep or Staying Asleep?</label>
+                    <select name="anxiety" id='anxiety' className="dropdown-menu p-4" onChange={handleChange}>
+                        <option value="0">Not at all</option>
+                        <option value="1">More than half the Days</option>
+                        <option value="2">Nearly Everyday</option>
+                        <option value="3">Everyday</option>
+                    </select>
+
+                    <label>Feeling Tired or having little Energy?</label>
+                    <select name="stress" id='stress' className="dropdown-menu p-4 " onChange={handleChange}>
+                        <option value="0">Not at all</option>
+                        <option value="1">More than half the Days</option>
+                        <option value="2">Nearly Everyday</option>
+                        <option value="3">Everyday</option>
+                    </select>
+
+                    <button type="submit" className="float-left">Submit</button>
+                </form>
+            </div>
         </div>
-      </div>
     )
 }
 export default Form
